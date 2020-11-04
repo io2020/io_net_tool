@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="toast_bg">#dddfe0</color>
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
+    <color name="btn_normal">#c5c5c5</color>
+    <color name="btn_click">#5d96fa</color>
+    <color name="picker_text_color">#878787</color>
+    <color name="picker_select_text_color">#03a9f4</color>
+    <color name="picker_title_text_color">#000000</color>
+    <color name="picker_border_color">#e5e5e5</color>
+    <color name="text_normal">#fff</color>
+    <color name="text_press">#999</color>
+    <color name="style_color">#f7f7f7</color>
+    <color name="building">#F5F5F5</color>
+    <color name="login">#A3A3A3</color>
+
+    <color name="black_333333">#333333</color>
+    <color name="black_666666">#666666</color>
+    <color name="black_FF1E2E48">#FF1E2E48</color>
+
+    <color name="gray_999999">#999999</color>
+    <color name="gray_a3a3a3">#a3a3a3</color>
+    <color name="gray_f0f0f0">#f0f0f0</color>
+    <color name="gray_DCDCDC">#DCDCDC</color>
+    <color name="gray_828384">#828384</color>
+    <color name="gray_edf3fa">#edf3fa</color>
+    <color name="blue_5B92FD">#5B92FD</color>
+    <color name="white_ffffff">#ffffff</color>
+    <color name="white_f0f4f7">#f0f4f7</color>
+    <color name="name_title">#f4f5f9</color>
+    <color name="white_FFF6F7F8">#FFF6F7F8</color>
+</resources>
