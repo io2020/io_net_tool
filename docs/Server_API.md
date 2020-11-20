@@ -4,59 +4,122 @@ Server API
 <br/> 
 
 ---
-鉴权
+开通隧道
 ```
-POST /client/auth/
+POST /client/port/open
 ```
-
 | 参数   | 含义                    |
-| ------ | ----------------------- |
-| appid | 客户端ID |
-| secretKey | 客户端密钥 |
+| ------ | -----------------------|
+| deviceRid | 客户端唯一标识 |
+| List\<Integer> ports | 申请开通的端口号列表|
+
+
 <br/> 
+
 
 | 返回值   | 含义         |
 | ------ | ----------------------- |
-| token | 令牌 |  
+| serverInfo | nps服务器信息 |
+| vKey | 客户端唯一密钥 |
+| clientInfo | 客户端信息 |
+| List\<channelInfo> | 隧道信息列表 |
+
 
 <br/> 
 <br/> 
 <br/> 
 
 ---
-开通端口
+查询隧道列表
 ```
-POST /client/port/open
+POST /client/port/list
 ```
 | 参数   | 含义                    |
 | ------ | -----------------------|
-| token | 令牌 |
 | deviceRid | 客户端唯一标识 |
-| connectType | 协议类型 |
-| port | 客户端协议对应端口号|
-| connectTypeN | 协议类型N |
-| portN | 客户端协议对应端口号N|
-
+| keyword | 申请开通的端口号列表|
 
 <br/> 
 
 
 | 返回值   | 含义         |
 | ------ | ----------------------- |
-| serverIp | nps服务器ip |
-|  serverPort | nps服务器端口 |
-| connectType | 协议类型 |
-| vKey | 协议端口对应密钥 |
-| clientId | 客户端id |
-| connectId | 隧道id |
-| connectTypeN | 协议类型N |
-| vKeyN | 协议端口对应密钥N |
-| clientIdN | 客户端idN |
-| connectIdN | 隧道idN |
+| serverInfo | nps服务器信息 |
+| vKey | 客户端唯一密钥 |
+| List\<channelInfo> | 隧道信息列表 |
 
 <br/> 
 <br/> 
 <br/> 
+
+---
+查询单个隧道
+```
+POST /client/port/single
+```
+| 参数   | 含义                    |
+| ------ | -----------------------|
+| deviceRid | 客户端唯一标识 |
+| channelId | 隧道id|
+
+<br/> 
+
+
+| 返回值   | 含义         |
+| ------ | ----------------------- |
+| serverInfo | nps服务器信息 |
+| vKey | 客户端唯一密钥 |
+| channelInfo | 隧道信息 |
+
+<br/> 
+<br/> 
+<br/> 
+
+---
+编辑隧道
+```
+POST /client/port/edit
+```
+| 参数   | 含义                    |
+| ------ | -----------------------|
+| deviceRid | 客户端唯一标识 |
+| channelId | 隧道id|
+
+<br/> 
+
+
+| 返回值   | 含义         |
+| ------ | ----------------------- |
+| serverInfo | nps服务器信息 |
+| vKey | 客户端唯一密钥 |
+| channelInfo | 隧道信息 |
+
+<br/> 
+<br/> 
+<br/> 
+
+---
+删除隧道
+```
+POST /client/port/delete
+```
+| 参数   | 含义                    |
+| ------ | -----------------------|
+| deviceRid | 客户端唯一标识 |
+| channelId | 隧道id|
+
+<br/> 
+
+
+| 返回值   | 含义         |
+| ------ | ----------------------- |
+| execResult | 操作结果 |
+
+<br/> 
+<br/> 
+<br/> 
+
+
 
 ---
 启动隧道
@@ -65,10 +128,16 @@ POST /client/port/start
 ```
 | 参数   | 含义                    |
 | ------ | -----------------------|
-| token | 令牌 |
 | deviceRid | 客户端唯一标识 |
-| connectType | 协议类型 |
 | vKey | 协议端口对应密钥 |
+
+<br/> 
+
+
+| 返回值   | 含义         |
+| ------ | ----------------------- |
+| execResult | 操作结果 |
+
 
 <br/> 
 <br/> 
@@ -81,7 +150,11 @@ POST /client/port/stop
 ```
 | 参数   | 含义                    |
 | ------ | -----------------------|
-| token | 令牌 |
 | deviceRid | 客户端唯一标识 |
-| connectType | 协议类型 |
 | vKey | 协议端口对应密钥 |
+
+<br/> 
+
+| 返回值   | 含义         |
+| ------ | ----------------------- |
+| execResult | 操作结果 |
